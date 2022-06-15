@@ -1,0 +1,40 @@
+&control    
+calculation='nscf'    
+pseudo_dir ='/deac/thonhauserGrp/chakrad/calculations/database-calc/s22x5-density/S22-optb88-rutgers/pseudodir'   
+outdir ='/deac/thonhauserGrp/chakrad/calculations/database-calc/s22x5-density/S22-optb88-rutgers/pseudodir'   
+nstep = 10  
+prefix='S22x5_01_04'    
+max_seconds=82000    
+verbosity='high'    
+forc_conv_thr=3d-3    
+/    
+&system    
+ibrav=0    
+nat = 8  
+ntyp= 2   
+ecutwfc = 50.0  
+ecutrho = 600.0  
+input_dft = 'sla pw obk8 vdW1'
+/    
+&electrons    
+diagonalization='cg'    
+diago_cg_maxiter=100    
+conv_thr = 1.0d-6  
+/    
+ATOMIC_SPECIES    
+H 1.0 h_pbe_v1.4.uspp.F.UPF  
+N 1.0 n_pbe_v1.2.uspp.F.UPF  
+K_POINTS gamma   
+CELL_PARAMETERS angstrom   
+26.757144 0.000000 0.000000  
+0.000000 20.861570 0.000000  
+0.000000 0.000000 21.619130  
+ATOMIC_POSITIONS angstrom   
+N 10.60703815 10.00000000 10.80956500 
+H 10.00000000 10.03582927 10.00000000 
+H 10.00000000 10.03582927 11.61913000 
+H 11.14205870 10.86157001 10.80956500 
+N 16.15010597 10.86157001 10.80956500 
+H 16.75714412 10.82574073 10.00000000 
+H 15.61508542 10.00000000 10.80956500 
+H 16.75714412 10.82574073 11.61913000 
